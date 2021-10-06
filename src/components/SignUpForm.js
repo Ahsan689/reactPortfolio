@@ -1,6 +1,36 @@
-import React from 'react';
+import React,{useState} from 'react';
 
 const SignUpForm = () => {
+
+    const[name, setName] = useState();
+    const[email, setEmail] = useState();
+    const[password, setPassword] = useState();
+
+    const item={
+        name:name,
+        email:email,
+        password:password
+    }
+
+    async function SendData(e){
+        e.preventDefault();
+
+        fetch("http://localhost:8000/api/user/register", {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+               },
+            body: JSON.stringify(item)
+         })
+         .then((response) => response.json())
+         .then((responseData) => {
+            alert("Your Ad Has Been Posted")
+            console.log(responseData);
+            })
+      }
+
+    
     return (
         <>
            <div className="limiter">
@@ -31,6 +61,7 @@ const SignUpForm = () => {
                      type="text"
                      name="username"
                      placeholder="Type your username"
+                     onChange={(e)=>{setName(e.target.value)}}
                  />
                  <span className="focus-input100" data-symbol="" />
                  </div>
@@ -45,6 +76,7 @@ const SignUpForm = () => {
                      type="text"
                      name="username"
                      placeholder="Type your email"
+                     onChange={(e)=>{setEmail(e.target.value)}}
                  />
                  <span className="focus-input100" data-symbol="" />
                  </div>
@@ -59,11 +91,12 @@ const SignUpForm = () => {
                      type="password"
                      name="pass"
                      placeholder="Type your password"
+                     onChange={(e)=>{setPassword(e.target.value)}}
                  />
                  <span className="focus-input100" data-symbol="" />
                  </div>
 
-                 <div
+                 {/* <div
                  className="wrap-input100 validate-input"
                  data-validate="Password is required"
                  >
@@ -75,14 +108,14 @@ const SignUpForm = () => {
                      placeholder="Type your password"
                  />
                  <span className="focus-input100" data-symbol="" />
-                 </div>
+                 </div> */}
                  <div className="text-right p-t-8 p-b-31">
                  <a style={{textDecoration:'none'}} href="#">Forgot password?</a>
                  </div>
                  <div className="container-login100-form-btn">
                  <div className="wrap-login100-form-btn">
                      <div className="login100-form-bgbtn" />
-                     <button className="login100-form-btn">SIGN UP</button>
+                     <button onClick={SendData} className="login100-form-btn">SIGN UP</button>
                  </div>
                  </div>
                  {/* <div className="txt1 text-center p-t-54 p-b-20">

@@ -1,6 +1,31 @@
-import React from 'react';
+import React,{useState, useEffect} from 'react';
 
 const LoginForm = () => {
+
+    const[username, setUserName] = useState();
+    const[password, setPassword] = useState();
+
+    function SendData(){
+
+        let item = {username, password};
+
+        fetch("http://127.0.0.1:8000/api/login", {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+               },
+            body: JSON.stringify({item})
+         })
+         
+         .then((response) => response.json())
+         .then((responseData) => {
+            alert("Your Ad Has Been Posted")
+            })
+            .done();
+      }
+
+    
     return (
         <div>
          <div className="limiter">
@@ -31,6 +56,7 @@ const LoginForm = () => {
                         type="text"
                         name="username"
                         placeholder="Type your username"
+                        onChange={(e)=>{setUserName(e.target.value)}}
                     />
                     <span className="focus-input100" data-symbol="" />
                     </div>
@@ -44,6 +70,7 @@ const LoginForm = () => {
                         type="password"
                         name="pass"
                         placeholder="Type your password"
+                        onChange={(e)=>{setPassword(e.target.value)}}
                     />
                     <span className="focus-input100" data-symbol="" />
                     </div>
@@ -53,7 +80,7 @@ const LoginForm = () => {
                     <div className="container-login100-form-btn">
                     <div className="wrap-login100-form-btn">
                         <div className="login100-form-bgbtn" />
-                        <button className="login100-form-btn">Login</button>
+                        <button onClick={SendData} className="login100-form-btn">Login</button>
                     </div>
                     </div>
                     {/* <div className="txt1 text-center p-t-54 p-b-20">

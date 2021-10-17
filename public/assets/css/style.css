@@ -1205,7 +1205,7 @@ img.img-fluid{
 }
 .contact .php-email-form input, .contact .php-email-form textarea {
   border-radius: 0;
-  box-shadow: none;
+  /* box-shadow: none; */
   font-size: 14px;
   height: auto;
   padding: 10px 15px;

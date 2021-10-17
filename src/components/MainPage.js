@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react';
-import {Carousel} from 'react-bootstrap';
+import {Carousel, Accordion} from 'react-bootstrap';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import PureCounter from  '@srexi/purecounterjs';
@@ -325,30 +325,26 @@ const MainPage = () => {
   </section> */}
   {/* End Hero */}
 
-        <Carousel fade id="hero">
+        <Carousel indicators={false} fade id="hero">
        
             <Carousel.Item >
             <img src="assets/img/slide/slide-1.jpg" className="w-100" style={{height:665}}/>
             <div className="dark-overlay"></div>
             <Carousel.Caption className="Carousel-Caption-top">
                 <h2 className="animate__animated animate__fadeInDown" >
-                Grow Your Business
+                Web Development
                 </h2>
                 <p className="animate__animated animate__fadeInUp">
-                Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut
-                et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem
-                mollitia ut. Similique ea voluptatem. Esse doloremque
-                accusamus repellendus deleniti vel. Minus et tempore modi
-                architecto.
+                Today, it's hard to imagine a successful business without at least one website or app. The larger the company, the more complex the software solutions it needs. Our web development experts are ready to support your company with  software of any type and difficulty.
                 </p>
-                <div>
+                {/* <div>
                   <a
                     href="#about"
                     className="btn-get-started animate__animated animate__fadeInUp scrollto"
                   >
                     Read More
                   </a>
-                </div>
+                </div> */}
            </Carousel.Caption>
             
                     
@@ -359,23 +355,19 @@ const MainPage = () => {
             <div className="dark-overlay"></div>
             <Carousel.Caption className="Carousel-Caption-top">
             <h2 className="animate__animated animate__fadeInDown">
-                  Lorem Ipsum Dolor
+                  UI/UX Design
                 </h2>
                 <p className="animate__animated animate__fadeInUp">
-                  Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut
-                  et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem
-                  mollitia ut. Similique ea voluptatem. Esse doloremque
-                  accusamus repellendus deleniti vel. Minus et tempore modi
-                  architecto.
+                Many brilliant products fail to win the hearts of their users due to poor design. However, a creative and attractive design is not enough to satisfy your customers, as it must go hand in hand with an intuitive user interface. Our design team will ensure that users of your digital products have the best experience.
                 </p>
-                <div>
+                {/* <div>
                   <a
                     href="#about"
                     className="btn-get-started animate__animated animate__fadeInUp scrollto"
                   >
                     Read More
                   </a>
-                </div>
+                </div> */}
                 </Carousel.Caption>
             </Carousel.Item>
 
@@ -384,23 +376,19 @@ const MainPage = () => {
             <div className="dark-overlay"></div>
                 <Carousel.Caption className="Carousel-Caption-top">
                 <h2 className="animate__animated animate__fadeInDown">
-                  Sequi ea ut et est quaerat
+                  Mobile App Development
                 </h2>
                 <p className="animate__animated animate__fadeInUp">
-                  Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut
-                  et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem
-                  mollitia ut. Similique ea voluptatem. Esse doloremque
-                  accusamus repellendus deleniti vel. Minus et tempore modi
-                  architecto.
+                Mobile-first is no longer a trend, but a necessity for almost every company with a software product. Mobile apps are beneficial for businesses in absolutely every industry as they help to cover a wider audience, move to the next level, and increase sales.
                 </p>
-                <div>
+                {/* <div>
                   <a
                     href="#about"
                     className="btn-get-started animate__animated animate__fadeInUp scrollto"
                   >
                     Read More
                   </a>
-                </div>
+                </div> */}
                 </Carousel.Caption>
             </Carousel.Item>
 
@@ -593,34 +581,32 @@ const MainPage = () => {
         <div className="row">
           <div className="col-lg-4 col-md-6 icon-box">
             <div className="icon">
-              <i className="bi bi-briefcase" />
+            <img src="assets/img/ui-design.png" width="60%" />
             </div>
             <h4 className="title">
-              <a href>Lorem Ipsum</a>
+              <a href>UI/UX Design</a>
             </h4>
             <p className="description">
-              Voluptatum deleniti atque corrupti quos dolores et quas molestias
-              excepturi sint occaecati cupiditate non provident
+            We make sure that your web application's user interface follows the patterns of your users' behavior and solves your business's problems.
             </p>
           </div>
           <div className="col-lg-4 col-md-6 icon-box">
             <div className="icon">
-              <i className="bi bi-card-checklist" />
+            <img src="assets/img/1016081_design_web design_web_ux_icon.png" width="70%" />
             </div>
             <h4 className="title">
-              <a href>Dolor Sitema</a>
+              <a href>Front-end Development</a>
             </h4>
             <p className="description">
-              Minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-              aliquip ex ea commodo consequat tarad limino ata
+            We work with modern frameworks like React.js, Next.js, to create next-generation user experiences that integrate and interact seamlessly with your database and APIs.
             </p>
           </div>
           <div className="col-lg-4 col-md-6 icon-box">
             <div className="icon">
-              <i className="bi bi-bar-chart" />
+            <img src="assets/img/1174949_js_react js_logo_react_react native_icon.png" width="70%" />
             </div>
             <h4 className="title">
-              <a href>Sed ut perspiciatis</a>
+              <a href>ReactNative Mobile App</a>
             </h4>
             <p className="description">
               Duis aute irure dolor in reprehenderit in voluptate velit esse
@@ -629,38 +615,35 @@ const MainPage = () => {
           </div>
           <div className="col-lg-4 col-md-6 icon-box">
             <div className="icon">
-              <i className="bi bi-binoculars" />
+            <img src="assets/img/1743800_api_app_application_development_software_icon.png" width="70%" />
             </div>
             <h4 className="title">
-              <a href>Magni Dolores</a>
+              <a href>API Development and Integration</a>
             </h4>
             <p className="description">
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-              officia deserunt mollit anim id est laborum
+            We can help you if you need to build or consume an API. Our teams have worked with all sort of APIs.
             </p>
           </div>
           <div className="col-lg-4 col-md-6 icon-box">
             <div className="icon">
-              <i className="bi bi-brightness-high" />
+            <img src="assets/img/282805_php_icon.png" width="70%" />
             </div>
             <h4 className="title">
-              <a href>Nemo Enim</a>
+              <a href>Back-end Development</a>
             </h4>
             <p className="description">
-              At vero eos et accusamus et iusto odio dignissimos ducimus qui
-              blanditiis praesentium voluptatum deleniti atque
+            Leverage our expertise with PHP, Laravel, Python, to build custom, secure, and reliable backends and APIs for web or mobile applications across multiple domains.
             </p>
           </div>
           <div className="col-lg-4 col-md-6 icon-box">
             <div className="icon">
-              <i className="bi bi-calendar4-week" />
+              <img style={{backgroundPosition:'cover center'}} src="assets/img/3338940_cart_basket_ecommerce_sale_shopping_icon.png" width="70%" />
             </div>
             <h4 className="title">
-              <a href>Eiusmod Tempor</a>
+              <a href>ECommerce Applications</a>
             </h4>
             <p className="description">
-              Et harum quidem rerum facilis est et expedita distinctio. Nam
-              libero tempore, cum soluta nobis est eligendi
+            If you have a store or need a new one, our web application development services can surely help you. We can create a store for you from scratch.
             </p>
           </div>
         </div>
@@ -672,41 +655,36 @@ const MainPage = () => {
       <div className="container">
         <div className="section-title">
           <h2>Why Us</h2>
-          <p>
-            Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
-            aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
-            quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
-            fugiat sit in iste officiis commodi quidem hic quas.
-          </p>
+          <h6>
+          Our  partnerships with clients go beyond technology. We delve into the daily realities of our clients and work collaboratively to create superior digital experiences for global development.
+          </h6>
         </div>
         <div className="row">
           <div className="col-lg-4">
             <div className="box">
               <span>01</span>
-              <h4>Lorem Ipsum</h4>
+              <h4>Quality over Quantity</h4>
               <p>
-                Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et
-                consectetur ducimus vero placeat
+              That is the key to our philosophy. We strive to provide the best service and produce the highest quality products by constantly innovating and improving all aspects of our process.
               </p>
             </div>
           </div>
           <div className="col-lg-4 mt-4 mt-lg-0">
             <div className="box">
               <span>02</span>
-              <h4>Repellat Nihil</h4>
+              <h4>Passion and Commitment</h4>
               <p>
-                Dolorem est fugiat occaecati voluptate velit esse. Dicta
-                veritatis dolor quod et vel dire leno para dest
+              We are passionate about our work. We are enthusiastic about the work we do. We build strong and trusting relationships with our clients and foster close ties between our team members.
+
               </p>
             </div>
           </div>
           <div className="col-lg-4 mt-4 mt-lg-0">
             <div className="box">
               <span>03</span>
-              <h4> Ad ad velit qui</h4>
+              <h4>Flexibility</h4>
               <p>
-                Molestiae officiis omnis illo asperiores. Aut doloribus vitae
-                sunt debitis quo vel nam quis
+              We use a set tools and procedures that can be adapted to each client’s wants and needs. We know each company has different needs that have to be worked out in different ways.
               </p>
             </div>
           </div>
@@ -719,12 +697,10 @@ const MainPage = () => {
       <div className="container">
         <div className="section-title">
           <h2>Portfolio</h2>
-          <p>
-            Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
-            aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
-            quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
-            fugiat sit in iste officiis commodi quidem hic quas.
-          </p>
+          <h4>
+            The Projects that we build
+            takes our clients to the next level.
+          </h4>
         </div>
         <div className="row">
           <div className="col-lg-12 d-flex justify-content-center">
@@ -995,12 +971,12 @@ const MainPage = () => {
     <section id="team" className="team">
       <div className="container">
         <div className="section-title">
-          <h2>Team</h2>
+          <h2>Our Team</h2>
           <p>
-            Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
-            aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
-            quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
-            fugiat sit in iste officiis commodi quidem hic quas.
+          We are a passionate team.
+          </p>
+          <p>
+          Looking to impact and change the world through software development.
           </p>
         </div>
         <div className="row justify-content-center">
@@ -1197,9 +1173,63 @@ const MainPage = () => {
             fugiat sit in iste officiis commodi quidem hic quas.
           </p>
         </div>
+        <div>
+          <Accordion >
+      
+            <Accordion.Item className="mb-1" eventKey="0">
+              <Accordion.Header>
+              How long will it take to get a new website?
+              </Accordion.Header>
+              <Accordion.Body>
+              On average, we shoot for a six to eight week turnaround, but the pace of any project is set by each client. How much input you can provide during the initial stages, your availability with feedback, how soon the content is ready – all this affects the speed of completion. The functionality needs may also play a role – more complex sites will take more time to develop.
+              </Accordion.Body>
+            </Accordion.Item>
+            {/* ////// */}
+            <Accordion.Item className="mb-1" eventKey="1">
+              <Accordion.Header>
+              Will my website be mobile-friendly?
+              </Accordion.Header>
+              <Accordion.Body>
+              Absolutely! Having a mobile-friendly website is more important than ever! We work hard to ensure your website looks great on a variety of devices.
+              </Accordion.Body>
+            </Accordion.Item>
+              {/* ////// */}
+              <Accordion.Item className="mb-1" eventKey="2">
+              <Accordion.Header>
+              Are there any other costs for my website?
+              </Accordion.Header>
+              <Accordion.Body>
+              If you host through us, there are hosting charges. There may also be costs for photos if you can’t supply them yourself. However we always do our best to use stock images sites that are free where possible. Other than that, we always make extra charges if there are any crystal clear up front so you know exactly where you stand.
+              </Accordion.Body>
+            </Accordion.Item>
+
+             {/* ////// */}
+             <Accordion.Item className="mb-1" eventKey="3">
+              <Accordion.Header>
+              How much input do I have in the process?
+              </Accordion.Header>
+              <Accordion.Body>
+                 A lot! Your input and feedback is crucial to this process. We’ll start with a lot of questions about your needs, your likes, your wants and work with you to develop just the right look and functionality.
+              </Accordion.Body>
+            </Accordion.Item>
+
+            {/* ////// */}
+            <Accordion.Item className="mb-1" eventKey="4">
+              <Accordion.Header>
+              How much does a new website cost?
+              </Accordion.Header>
+              <Accordion.Body>
+              There’s not one single answer to this question. A website design is quoted based on the needs of each individual project. Every website is unique and requires different components; we design and develop custom websites specifically for your small business. 
+              </Accordion.Body>
+            </Accordion.Item>
+          </Accordion>
+        </div>
+        <h2 className="mt-5 text-center"> READY TO GET STARTED</h2>
+        <p className="text-center"> Don't be afraid! We'll walk you through the entire process, hold your hand as much as you need, and help you through all the technical aspects that may seem scary. We work best with clients who leave the heavy lifting to us.
+        </p>
         <div className="faq-list">
           <ul>
-            <li data-aos="fade-up">
+            {/* <li data-aos="fade-up">
               <i className="bx bx-help-circle icon-help" />{" "}
               <a
                 data-bs-toggle="collapse"
@@ -1209,7 +1239,7 @@ const MainPage = () => {
               >
                 Non consectetur a erat nam at lectus urna duis?{" "}
                 <i className={"bx "+(isOpen1? 'icon-close bx-chevron-up':'icon-show bx-chevron-down')} />
-                {/* <i className={"bx icon-close bx-chevron-up"+(isOpen? '':'')} /> */}
+                <i className={"bx icon-close bx-chevron-up"+(isOpen? '':'')} />
               </a>
               <div
                 id="faq-list-1"
@@ -1222,8 +1252,8 @@ const MainPage = () => {
                   magna fringilla urna porttitor rhoncus dolor purus non.
                 </p>
               </div>
-            </li>
-            <li data-aos="fade-up" data-aos-delay={100}>
+            </li> */}
+            {/* <li data-aos="fade-up" data-aos-delay={100}>
               <i className="bx bx-help-circle icon-help" />{" "}
               <a
                 data-bs-toggle="collapse"
@@ -1233,7 +1263,7 @@ const MainPage = () => {
               >
                 Feugiat scelerisque varius morbi enim nunc?{" "}
                 <i className={"bx "+(isOpen2? 'icon-close bx-chevron-up':'icon-show bx-chevron-down')} />
-                {/* <i className="bx bx-chevron-up icon-close" /> */}
+                <i className="bx bx-chevron-up icon-close" />
               </a>
               <div
                 id="faq-list-2"
@@ -1249,8 +1279,8 @@ const MainPage = () => {
                   ultrices eros in cursus turpis massa tincidunt dui.
                 </p>
               </div>
-            </li>
-            <li data-aos="fade-up" data-aos-delay={200}>
+            </li> */}
+            {/* <li data-aos="fade-up" data-aos-delay={200}>
               <i className="bx bx-help-circle icon-help" />{" "}
               <a
                 data-bs-toggle="collapse"
@@ -1260,7 +1290,7 @@ const MainPage = () => {
               >
                 Dolor sit amet consectetur adipiscing elit?{" "}
                 <i className={"bx "+(isOpen3? 'icon-close bx-chevron-up':'icon-show bx-chevron-down')} />
-                {/* <i className="bx bx-chevron-up icon-close" /> */}
+                <i className="bx bx-chevron-up icon-close" />
               </a>
               <div
                 id="faq-list-3"
@@ -1276,8 +1306,8 @@ const MainPage = () => {
                   odio morbi quis
                 </p>
               </div>
-            </li>
-            <li data-aos="fade-up" data-aos-delay={300}>
+            </li> */}
+            {/* <li data-aos="fade-up" data-aos-delay={300}>
               <i className="bx bx-help-circle icon-help" />{" "}
               <a
                 data-bs-toggle="collapse"
@@ -1288,7 +1318,7 @@ const MainPage = () => {
                 Tempus quam pellentesque nec nam aliquam sem et tortor
                 consequat?
                  <i className={"bx "+(isOpen4? 'icon-close bx-chevron-up':'icon-show bx-chevron-down')} />
-                {/* <i className="bx bx-chevron-up icon-close" /> */}
+                <i className="bx bx-chevron-up icon-close" />
               </a>
               <div
                 id="faq-list-4"
@@ -1302,8 +1332,8 @@ const MainPage = () => {
                   bibendum est. Purus gravida quis blandit turpis cursus in.
                 </p>
               </div>
-            </li>
-            <li data-aos="fade-up" data-aos-delay={400}>
+            </li> */}
+            {/* <li data-aos="fade-up" data-aos-delay={400}>
               <i className="bx bx-help-circle icon-help" />{" "}
               <a
                 data-bs-toggle="collapse"
@@ -1314,7 +1344,7 @@ const MainPage = () => {
                 Tortor vitae purus faucibus ornare. Varius vel pharetra vel
                 turpis nunc eget lorem dolor?{" "}
                 <i className={"bx "+(isOpen5? 'icon-close bx-chevron-up':'icon-show bx-chevron-down')} />
-                {/* <i className="bx bx-chevron-up icon-close" /> */}
+                <i className="bx bx-chevron-up icon-close" />
               </a>
               <div
                 id="faq-list-5"
@@ -1328,7 +1358,7 @@ const MainPage = () => {
                   sed. Ut venenatis tellus in metus vulputate eu scelerisque.
                 </p>
               </div>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
